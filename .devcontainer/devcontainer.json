@@ -1,0 +1,25 @@
+{
+  "name": "My Python 3.10 Codespace",
+  // This line specifies the Docker image to use.
+  // We're choosing a common Python 3.10 image from Microsoft.
+  "image": "mcr.microsoft.com/devcontainers/python:0-3.10",
+
+  // OPTIONAL: Add features like Rust if you still need it for 'tokenizers'
+  "features": {
+    "ghcr.io/devcontainers/features/rust:1": {}
+  },
+
+  // OPTIONAL: Commands to run after the container is created
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y build-essential && pip install --upgrade pip setuptools wheel",
+
+  // OPTIONAL: VS Code extensions you want pre-installed
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",         // Python support
+        "ms-toolsai.jupyter"      // Jupyter notebook support
+        // Add other extensions you use
+      ]
+    }
+  }
+}
